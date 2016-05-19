@@ -91,16 +91,17 @@
 // NOTE NB all values for DELTA_* values MUST be floating point, so always have a decimal point in them
 
 // Center-to-center distance of the holes in the diagonal push rods.
-#define DELTA_DIAGONAL_ROD 140.16 // mm
+// #define DELTA_DIAGONAL_ROD 140.16 // mm old ver
+#define DELTA_DIAGONAL_ROD 150.492 // mm
 
 // Horizontal offset from middle of printer to smooth rod center.
 #define DELTA_SMOOTH_ROD_OFFSET 143.038 // mm
 
 // Horizontal offset of the universal joints on the end effector.
-#define DELTA_EFFECTOR_OFFSET 33.072 // mm
+#define DELTA_EFFECTOR_OFFSET 34.0 // mm
 
 // Horizontal offset of the universal joints on the carriages.
-#define DELTA_CARRIAGE_OFFSET 31.293 // mm
+#define DELTA_CARRIAGE_OFFSET 34.932 // mm
 
 // Effective horizontal distance bridged by diagonal push rods.
 #define DELTA_RADIUS (DELTA_SMOOTH_ROD_OFFSET-DELTA_EFFECTOR_OFFSET-DELTA_CARRIAGE_OFFSET)
@@ -198,9 +199,9 @@
 
 // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 // Ultimaker
-    #define  DEFAULT_Kp 38.79
-    #define  DEFAULT_Ki 4.54
-    #define  DEFAULT_Kd 82.95
+    #define  DEFAULT_Kp 48.02
+    #define  DEFAULT_Ki 6.17
+    #define  DEFAULT_Kd 93.47
 
 // MakerGear
 //    #define  DEFAULT_Kp 7.0
@@ -397,7 +398,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 // For deltabots this means top and center of the Cartesian print volume.
 #define MANUAL_X_HOME_POS 0
 #define MANUAL_Y_HOME_POS 0
-#define MANUAL_Z_HOME_POS 105 // For delta: Distance between nozzle and print surface after homing.
+#define MANUAL_Z_HOME_POS 87 // For delta: Distance between nozzle and print surface after homing.
 
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
