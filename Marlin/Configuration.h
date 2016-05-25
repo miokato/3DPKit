@@ -101,10 +101,11 @@
 #define DELTA_EFFECTOR_OFFSET 34.0 // mm
 
 // Horizontal offset of the universal joints on the carriages.
-#define DELTA_CARRIAGE_OFFSET 34.932 // mm
+#define DELTA_CARRIAGE_OFFSET 34.632 // mm
 
 // Effective horizontal distance bridged by diagonal push rods.
-#define DELTA_RADIUS (DELTA_SMOOTH_ROD_OFFSET-DELTA_EFFECTOR_OFFSET-DELTA_CARRIAGE_OFFSET)
+// #define DELTA_RADIUS (DELTA_SMOOTH_ROD_OFFSET-DELTA_EFFECTOR_OFFSET-DELTA_CARRIAGE_OFFSET)
+#define DELTA_RADIUS 75.0
 
 //===========================================================================
 //=============================Thermal Settings  ============================
@@ -198,10 +199,14 @@
   #define PID_dT ((OVERSAMPLENR * 10.0)/(F_CPU / 64.0 / 256.0)) //sampling period of the temperature routine
 
 // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
+// FabKit
+    #define  DEFAULT_Kp 38.79
+    #define  DEFAULT_Ki 4.54
+    #define  DEFAULT_Kd 82.95
 // Ultimaker
-    #define  DEFAULT_Kp 48.02
-    #define  DEFAULT_Ki 6.17
-    #define  DEFAULT_Kd 93.47
+//  #define  DEFAULT_Kp 48.02
+//  #define  DEFAULT_Ki 6.17
+//  #define  DEFAULT_Kd 93.47
 
 // MakerGear
 //    #define  DEFAULT_Kp 7.0
@@ -404,7 +409,8 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
 
 // delta homing speeds must be the same on xyz
-#define HOMING_FEEDRATE {40*60, 40*60, 40*60, 0}  // set the homing speeds (mm/min)
+#define DELTA_FEEDRATE 2500
+#define HOMING_FEEDRATE {DELTA_FEEDRATE, DELTA_FEEDRATE, DELTA_FEEDRATE, 0}  // set the homing speeds (mm/min)
 
 // default settings
 // delta speeds must be the same on xyz
