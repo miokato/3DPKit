@@ -2,6 +2,7 @@
 #define CONFIG_STORE_H
 
 #include "Configuration.h"
+#include "DeltaConfig.h"
 
 void Config_ResetDefault();
 

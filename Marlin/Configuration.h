@@ -1,6 +1,6 @@
 /**
  * FabLab Kamakura 3DP WS
- * Ver.1
+ * Ver.2
  * Author : Mio Kato
  *
  * I adpot 45 degrees hotend base and carriage base to this printer.
@@ -105,7 +105,7 @@
 
 // Effective horizontal distance bridged by diagonal push rods.
 // #define DELTA_RADIUS (DELTA_SMOOTH_ROD_OFFSET-DELTA_EFFECTOR_OFFSET-DELTA_CARRIAGE_OFFSET)
-#define DELTA_RADIUS 75.0
+// #define DELTA_RADIUS 75.5
 
 //===========================================================================
 //=============================Thermal Settings  ============================

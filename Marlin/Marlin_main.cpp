@@ -48,6 +48,9 @@
 #include "pins_arduino.h"
 #include "math.h"
 
+// Configuration about delta settings
+#include "DeltaConfig.h"
+
 #ifdef BLINKM
 #include "BlinkM.h"
 #include "Wire.h"
@@ -1813,8 +1816,6 @@ void process_commands()
         break;
 #ifndef Z_PROBE_SLED
     case 30: // G30 Single Z Probe
-        {
-            engage_z_probe(); // Engage Z Servo endstop if available
             st_synchronize();
             // TODO: make sure the bed_level_rotation_matrix is identity or the planner will get set incorectly
             setup_for_endstop_move();
